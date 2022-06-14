@@ -2,7 +2,9 @@
 Arbitrage locator that spots betting opportunities across different sports betting markets
 
 Ideas : 
-Use 3 websites (Barstool, Draftkings, FanDuel)
+Use many websites (Barstool, Draftkings, FanDuel)
+Compare website odds to Pinnacle
+Find both arbitrage and positive EV opportunities
 
 Helpful Websites :
 https://python.plainenglish.io/development-of-an-arbitrage-betting-bot-8b5d9a71da23
@@ -15,7 +17,5 @@ https://sportssmartbetting.com/arbitrage-betting-software-in-the-usa/
 
 
 Potential Names : 
-B-ARB-IE
-B-ARB-Q
 bARBell
 
