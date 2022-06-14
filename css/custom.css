@@ -3,6 +3,7 @@
 	height: 75px;
 	border: solid 0px black;
 	background-color: #cedef0;
+	z-index: 1000;
 }
 body{
 	margin: 0px;
@@ -22,7 +23,7 @@ body{
 	display: flex;
 	border: solid 0px black;
 	width: 220px;
-	height: 70px;
+	height: 75px;
 	position: fixed;
 	right: 15px;
 	align-items: center;
@@ -74,12 +75,64 @@ body{
 	top: 7px;
 }
 #nav{
+	width: 200px;
+	height: 75px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	left: 190px;
+	border: solid 0px black;
+}
+#calculator{
 	width: 90px;
 	display: flex;
 	height: 40px;
-	border: solid 1.5px #9d9ad9;
+	border: solid 0px #9d9ad9;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Anybody', cursive;
+	color: #6b9ad9;
+	text-decoration: none;
+	font-size: 15px;
+}
+#Betting{
+	width: 90px;
+	display: flex;
+	height: 40px;
+	border: solid 0px #9d9ad9;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Anybody', cursive;
+	color: #6b9ad9;
+	text-decoration: none;
+	font-size: 15px;
+}
+#divider{
+	height: 73px;
+	width: 0px;
+	border: solid 1px #9d9ad9;
 	position: fixed;
-	left: 200px;
+	left: 185px;
+}
+#calculator:hover{
+	color: #9d9ad9;
+}
+#Betting:hover{
+	color: #9d9ad9;
 }
 
 
+
+
+
+
+
+
+#mainArea{
+	background-color: #9d9ad9;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 75px;
+}
