@@ -1,4 +1,4 @@
-# Arb-O-Matic
+# bARBell
 Arbitrage locator that spots betting opportunities across different sports betting markets
 
 Ideas : 
