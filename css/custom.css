@@ -1,0 +1,85 @@
+#header{
+	width: 100vw;
+	height: 75px;
+	border: solid 0px black;
+	background-color: #cedef0;
+}
+body{
+	margin: 0px;
+}
+#logo{
+	font-size: 40px;
+	position: fixed;
+	left: 10px;
+	top: 10px;
+	font-family: 'Anybody', cursive;
+	color: #9d9ad9;
+}
+
+
+/*log in and sign up section*/
+#l_S_container{
+	display: flex;
+	border: solid 0px black;
+	width: 220px;
+	height: 70px;
+	position: fixed;
+	right: 15px;
+	align-items: center;
+	justify-content: space-around;
+
+}
+#login{
+	width: 90px;
+	display: flex;
+	height: 40px;
+	border: solid 1.5px #9d9ad9;
+	border-radius: 20px;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Anybody', cursive;
+	color: #6b9ad9;
+	text-decoration: none;
+	font-size: 15px;
+
+}
+#sign_up{
+	width: 90px;
+	display: flex;
+	height: 40px;
+	border: solid 1.5px #9d9ad9;
+	border-radius: 20px;
+	background-color: #9d9ad9;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Anybody', cursive;
+	color: whitesmoke;
+	text-decoration: none;
+	font-size: 15px;
+
+
+}
+#login:hover{
+	background-color: #E4F0FF;
+}
+#sign_up:hover{
+	background-color: #E4F0FF;
+	color: #6b9ad9;
+}
+#logo_img{
+	position: fixed;
+	width: 100px;
+	height: auto;
+	left: 22px;
+	top: 7px;
+}
+#nav{
+	width: 90px;
+	display: flex;
+	height: 40px;
+	border: solid 1.5px #9d9ad9;
+	position: fixed;
+	left: 200px;
+}
+
+
