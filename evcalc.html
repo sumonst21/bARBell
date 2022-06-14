@@ -1,0 +1,18 @@
+
+
+Wager
+[Input]
+Sportsbook Odds
+[Input]
+True Win %
+[Input]
+Expected Value
+[Output]
+
+
+fair win probability = from true value calc
+fair loss probability = 1-fair win probability
+profit (negative odds) = (100/|negative odds|)*wager
+profit (positive odds) = (positive odds/100)*wager
+
+expected value = (fair win probability) x (profit if win) - (fair loss probability) x (stake)
