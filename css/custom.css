@@ -16,7 +16,7 @@ body{
 	left: 10px;
 	top: 10px;
 	font-family: 'Anybody', cursive;
-	color: #E4F0FF;
+	color: #b1d7fc;
 	text-decoration: none;
 }
 
@@ -155,21 +155,21 @@ body{
 	top: 80px;
 	left: 189px;
 	display: none;
-	z-index: 100;
+	z-index: 1000;
 	border-radius: 3px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 #dropdwn2{
 	padding-top: 8px;
 	width: 110px;
-	height: 100px;
-	background-color: #9d9ad9;
+	height: 155px;
+	background-color: white;
 	position: fixed;
 	display: flex;
 	top: 80px;
 	left: 285px;
 	display: none;
-	z-index: 100;
+	z-index: 1000;
 	border-radius: 3px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
@@ -291,10 +291,10 @@ body{
     border-radius: var(--border-radius);
     outline: none;
     cursor: pointer;
-    background: var(--color-primary);
+    background: #9d9ad9;
 }
 .form_button:hover {
-    background: var(--color-primary-dark);
+    background: #8784b8;
 }
 .form_button:active {
     transform: scale(0.98);
