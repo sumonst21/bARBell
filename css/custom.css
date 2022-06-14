@@ -15,6 +15,7 @@ body{
 	top: 10px;
 	font-family: 'Anybody', cursive;
 	color: #E4F0FF;
+	text-decoration: none;
 }
 
 
@@ -142,15 +143,234 @@ body{
 
 /*slide down menue*/
 #dropdwn{
-	width: 120px;
+	padding-top: 8px;
+	width: 110px;
 	height: 100px;
 	background-color: #9d9ad9;
 	position: fixed;
 	display: flex;
-	top: 83px;
-	left: 192px;
+	top: 80px;
+	left: 189px;
 	display: none;
 	z-index: 100;
-	border-radius: 7px;
+	border-radius: 3px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
+#dropdwn2{
+	padding-top: 8px;
+	width: 110px;
+	height: 100px;
+	background-color: #9d9ad9;
+	position: fixed;
+	display: flex;
+	top: 80px;
+	left: 285px;
+	display: none;
+	z-index: 100;
+	border-radius: 3px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.Calc{
+	font-size: 15px;
+	font-family: 'Anybody', cursive;
+	color: #E4F0FF;
+	text-decoration: none;
+	margin: 9px;
+
+}
+.group{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	width: 300px;
+
+}
+label{
+	border: solid 0px black;
+	font-size: 18px;
+	font-family: 'Anybody', cursive;
+	color: #E4F0FF;
+	width: 114px;
+	justify-content: center;
+	align-items: center;
+	text-align: right;
+	margin-right: 10px;
+}
+.input1{
+	width: 150px;
+	height: 35px;
+	border-color: white;
+}
+#tr1, #tr2{
+	display: flex;
+	width:  600px;
+	height: 70px;
+	border: solid 0px black;
+	align-items: center;
+	justify-content: center;
+	justify-content: space-around;
+	margin: 0 auto;
+	background-color: #6b9ad9;
+
+	padding-right: 20px;
+
+}
+#tr1{
+	padding-top: 10px;
+	margin-top: 00px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+
+}
+#tr2{
+	padding-bottom: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+}
+.description_cont{
+	margin-top: 50px;
+	width: 100vw;
+	display: flex;
+	height: 75px;
+	justify-content: center;
+	align-items: center;
+	border: solid 0px black;
+
+}
+.description{
+	font-size: 40px;
+	font-family: 'Anybody', cursive;
+	color: #6b9ad9;
+}
+
+#footer{
+	width: 100vw;
+	height: 150px;
+	background-color: #6b9ad9;
+	position: absolute;
+	z-index: 100;
+	bottom: 0px;
+}
+
+
+/* Login and Sign Up Form */
+#body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.form_container {
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+}
+.form_container, .form_button, .form_input{
+	font-family: 'Anybody', cursive;
+	color: #6b9ad9;
+	font: 1rem;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form_title{
+	text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form_message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form_message-success {
+    color: var(--color-success);
+}
+
+.form_message_error {
+    color: var(--color-error);
+}
+.input_group {
+    margin-bottom: 1rem;
+}
+.form_input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 5s;
+}
+.form_input:focus{
+	border-color: var(--color-primary);
+	background-color: white;
+}
+.form__input--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+.input_error{
+	margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.form_button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+.form_button:hover {
+    background: var(--color-primary-dark);
+}
+.form_button:active {
+    transform: scale(0.98);
+}
+.form_text {
+    text-align: center;
+}
+
+.form_link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.form_link:hover {
+    text-decoration: underline;
+}
+

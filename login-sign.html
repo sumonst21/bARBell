@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Barbell</title>
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@500&display=swap');
+	</style>
+</head>
+<body>
+	<div id="body">
+		<div class="form_container">
+			<form class="form" id="login_form">
+				<h1 class="form_title">Login</h1>
+				<div class="form_message form_message_error"></div>
+				<div class="input_group">
+					<input type="text" class="form_input" autofoucs placeholder="Username or email">
+					<div class="input_error"></div>
+				</div>
+				<div class="input_group">
+					<input type="password" class="form_input" autofoucs placeholder="Password">
+					<div class="input_error"></div>
+				</div>
+				<button class="form_button" type="submit">Continue</button>
+				<p class="form_text">
+					<a href="#" class="form_link">Forgot your password?</a>
+				</p>
+				<p class="form_text">
+					<a class="form_link" href="#" id="link_create_account">Don't have an account. Create Account</a>
+				</p>
+			</form>
+			<form class="form form--hidden" id="create_account">
+				<h1 class="form_title">Create Account</h1>
+				<div class="form_message form_message_error"></div>
+				<div class="input_group">
+					<input type="text" id="signupUsername" class="form_input" autofoucs placeholder="Username">
+					<div class="input_error"></div>
+				</div>
+				<div class="input_group">
+					<input type="text" class="form_input" autofoucs placeholder="Email Adress">
+					<div class="input_error"></div>
+				</div>
+				<div class="input_group">
+					<input type="password" class="form_input" autofoucs placeholder="Password">
+					<div class="input_error"></div>
+				</div>
+				<div class="input_group">
+					<input type="password" class="form_input" autofoucs placeholder="Confirm Password">
+					<div class="input_error"></div>
+				</div>
+				<button class="form_button" type="submit">Continue</button>
+				<p class="form_text">
+					<a class="form_link" href="#" id="link_login">Already have an account? Sign In</a>
+				</p>
+			</form>
+			
+		</div>
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="js/custom.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
