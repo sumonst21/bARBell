@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <script>
+		function mult(value){
+			var x,y,z;
+			
+			if(value>0){
+				((True Win % /100)*2)-1
+			}
+			
+			document.getElementById('probability').value = x;
+			document.getElementById('decimal').value = y;
+			document.getElementById('fraction').value = z;
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+    <div id="mainArea">
+		<div class="description_cont">
+			<div class="description">
+				Sportsbook Odds Simplified
+			</div>
+		</div>
+		<div id="tr1">
+			<div class="group">
+				<label for="">Risk Level % (0-1) : </label>
+				<input type ="text" name="" onkeyup="mult(this.value);" class="input1">
+
+			</div>
+
+			<div class="group" >
+				<label for="">Sportsbook Odds : </label>
+				<input type ="text" name="" onkeyup="mult(this.value);" class="input2">
+			</div>
+		</div>
+		<div id="tr2">
+			<div class="group">
+				<label for="">True Win % : </label>
+				<input type ="text" name="" onkeyup="mult(this.value);" class="input3">
+			</div>
+
+			<div class="group" >
+				<label for="">Percent of Bankroll to Wager : </label>
+				<input type ="text" id="bankroll" name="" readonly class="input4">
+			</div>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
