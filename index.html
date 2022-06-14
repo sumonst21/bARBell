@@ -9,11 +9,35 @@
 	@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@500&display=swap');
 	</style>
 
+	<script>
+		function mult(value){
+			var x,y,z;
+			
+			if(value>0){
+				x = 100/(parseInt(value)+100)*100
+				y = (value/100)+1
+				z = value/100
+			}
+			else{
+				x = (-1*value)/((-1*value)+100)*100
+				y = 1+(100/(-1*value))
+				z = -100/(value)
+			}
+			
+			document.getElementById('probability').value = x;
+			document.getElementById('decimal').value = y;
+			document.getElementById('fraction').value = z;
+		}
+
+	</script>
+
 </head>
 <body>
 
+	<div id="dropdwn"></div>
 
 	<img src="images/barbell.png" id="logo_img">
+
 	<div id="header">
 		<div id="logo">
 			BARBELL
@@ -40,11 +64,48 @@
 
 
 	<div id="mainArea">
+		<label for="">American : </label>
+		<input type ="text" name="" onkeyup="mult(this.value);">
+		<br><br>
+
+		<label for="">Decimal : </label>
+		<input type ="text" id="decimal" name="" readonly>
+		
+		<label for="">Fraction : </label>
+		<input type ="text" id="fraction" name="" readonly>
+
+		<br><br>
+		<label for="">Probability : </label>
+		<input type ="text" id="probability" name="" readonly>
 	</div>
 
 
 	<div id="footer">
 	</div>
+
+
+
+	<label for="">American : </label>
+	<input type ="text" name="" onkeyup="mult(this.value);">
+	<br><br>
+
+	<label for="">Decimal : </label>
+	<input type ="text" id="decimal" name="" readonly>
+	
+	<label for="">Fraction : </label>
+	<input type ="text" id="fraction" name="" readonly>
+
+	<br><br>
+	<label for="">Probability : </label>
+	<input type ="text" id="probability" name="" readonly>
+
+
+
+
+
+
+
+>>>>>>> c36b6f2a1def9b21f52a284c88f61fb986d87353
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <script src="js/custom.js"></script>
