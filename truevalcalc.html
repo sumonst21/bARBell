@@ -13,4 +13,126 @@ Convert both sportsbook odds to %
 Add both percents together = total
 %/total = true win %
 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<script>
+	function mult(value){
+		var x
+
+		if(value>0){
+			x = 100/(parseInt(value)+100)*100
+		}
+		else{
+			x = (-1*value)/((-1*value)+100)*100
+		}
+
+		document.getElementById('Percent_1').value = x;
+	}
+
+
+</script>
+
+<link rel="stylesheet" href="css/custom.css">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@500&display=swap');
+</style>
+</head>
+<body>
+	<div class="form_container">
+			<div class="form" id="create_account">
+				<h1 class="form_title" style="color: #6b9ad9;">Calculate The Odds</h1>
+				<div class="form_message form_message_error"></div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						Enter Odds
+					</div>
+					<input type="text" onkeyup="mult(this.value);" id="signupUsername" class="form_input" autofoucs placeholder="Enter Odds">		
+				</div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						Percentage
+					</div>
+					<input type="text" id="Percent_1" name="" readonly class="form_input" autofoucs placeholder="Enter a percentage">
+				</div>
+			</div>
+			
+		</div>
+
+	<div id="dropdwn">
+		<a href="odds_calc.html" class="Calc">
+			Odds
+		</a>
+		<div class="Calc">
+			EV
+		</div>
+		<div class="Calc">
+			Arbitrage
+		</div>
+		<div class="Calc">
+			Bankroll
+		</div>
+		<div class="Calc">
+			Parlay
+		</div>
+		<div class="Calc">
+			True Value
+		</div>
+	</div>
+	<div id="dropdwn2">
+		<a href="odds_calc.html" class="Calc">
+			Odds
+		</a>
+		<div class="Calc">
+			EV
+		</div>
+		<div class="Calc">
+			Arbitrage
+		</div>
+		<div class="Calc">
+			Bankroll
+		</div>
+		<div class="Calc">
+			Parlay
+		</div>
+		<div class="Calc">
+			True Value
+		</div>
+	</div>
+
+	
+
+	<div id="header">
+		<a href="index.html" id="logo">
+			B<span style="color: #E4F0FF">ARB</span>ELL
+			<img src="images/barbell.png" id="logo_img">
+		</a>
+		<div id="divider">
+			
+		</div>
+		<div id="nav">
+			<a href="#" id="calculator">
+				Calculator
+			</a>
+			<a href="#" id="Betting">
+				Betting
+			</a>
+		</div>
+		<div id="l_S_container">
+			<a href="login-sign.html" id="login">Login</a>
+			<a href="login-sign.html" id="sign_up">Sign Up</a>
+		</div>
+	</div>
+	<div id="mainArea">
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="js/custom.js"></script>
+</body>
+</html>
 
