@@ -1,28 +1,123 @@
 <!DOCTYPE html>
 <html>
-
-
 <head>
-    <script>
-		function mult(value){
-			var x,y,z;
-			
-			if(value>0){
-				((True Win % /100)*2)-1
-			}
-			
-			document.getElementById('probability').value = x;
-			document.getElementById('decimal').value = y;
-			document.getElementById('fraction').value = z;
-		}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Barbell</title>
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@500&display=swap');
+	</style>
 
-	</script>
+	
 
 </head>
 
 <body>
+<div id="body">
+		<div class="form_container">
+			<div class="form" id="create_account">
+				<h1 class="form_title" style="color: #6b9ad9;">Bankroll to Wage Calculator</h1>
+				<div class="form_message form_message_error"></div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						Risk Level % (0-1) :
+					</div>
+					<input type="text" id="risk" autofoucs placeholder="Enter Risk (0.5 = average)">		
+				</div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						Sportsbook Odds :
+					</div>
+					<input type="text" id="odds" autofoucs placeholder="Enter Odds">
+				</div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div class="captions">
+						True Win % :
+					</div>
+					<input type="text"  id="truewin" autofoucs placeholder="Enter Probability">
+				</div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						Percent of Bankroll to Wager :
+					</div>
+					<input type="text" id="bankroll" >
+				</div>
+			</div>
+			
+		</div>
 
-    <div id="mainArea">
+	<div id="dropdwn">
+		<a href="odds_calc.html" class="Calc">
+			Odds
+		</a>
+		<div class="Calc">
+			EV
+		</div>
+		<div class="Calc">
+			Arbitrage
+		</div>
+		<div class="Calc">
+			Bankroll
+		</div>
+		<div class="Calc">
+			Parlay
+		</div>
+		<div class="Calc">
+			True Value
+		</div>
+	</div>
+	<div id="dropdwn2">
+		<a href="odds_calc.html" class="Calc">
+			Odds
+		</a>
+		<div class="Calc">
+			EV
+		</div>
+		<div class="Calc">
+			Arbitrage
+		</div>
+		<div class="Calc">
+			Bankroll
+		</div>
+		<div class="Calc">
+			Parlay
+		</div>
+		<div class="Calc">
+			True Value
+		</div>
+	</div>
+
+	<img src="images/barbell.png" id="logo_img">
+
+	<div id="header">
+		<a href="index.html" id="logo">
+			B<span style="color: #E4F0FF">ARB</span>ELL
+		</a>
+		<div id="divider">
+			
+		</div>
+		<div id="nav">
+			<a href="#" id="calculator">
+				Calculator
+			</a>
+			<a href="#" id="Betting">
+				Betting
+			</a>
+		</div>
+		<div id="l_S_container">
+			<a href="login-sign.html" id="login">Login</a>
+			<a href="login-sign.html" id="sign_up">Sign Up</a>
+		</div>
+	</div>
+	<div id="mainArea">
+	</div>
+
+<!--
+
+
+
+	<div id="mainArea">
 		<div class="description_cont">
 			<div class="description">
 				Sportsbook Odds Simplified
@@ -30,30 +125,65 @@
 		</div>
 		<div id="tr1">
 			<div class="group">
-				<label for="">Risk Level % (0-1) : </label>
+				<label for="">American : </label>
 				<input type ="text" name="" onkeyup="mult(this.value);" class="input1">
 
 			</div>
 
 			<div class="group" >
-				<label for="">Sportsbook Odds : </label>
-				<input type ="text" name="" onkeyup="mult(this.value);" class="input2">
+				<label for="">Decimal : </label>
+				<input type ="text" id="decimal" name="" readonly class="input1">
 			</div>
 		</div>
 		<div id="tr2">
 			<div class="group">
-				<label for="">True Win % : </label>
-				<input type ="text" name="" onkeyup="mult(this.value);" class="input3">
+				<label for="">Fraction : </label>
+				<input type ="text" id="fraction" name="" readonly class="input1">
 			</div>
 
 			<div class="group" >
-				<label for="">Percent of Bankroll to Wager : </label>
-				<input type ="text" id="bankroll" name="" readonly class="input4">
+				<label for="">Probability : </label>
+				<input type ="text" id="probability" name="" readonly class="input1">
 			</div>
 		</div>
 	</div>
 
+
+	<div id="footer">
+		footer... fill with stuff
+	</div>
+-->
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="js/custom.js"></script>
+<script>
+
+		var risk = document.getElementById("risk");
+        var odds = document.getElementById("odds");
+        var truewin = document.getElementById("truewin");
+
+        var bankrollpercent = document.getElementById("bankroll");
+
+    function getBankRoll(){
+
+        if(odds.value>0){
+            var bankroll = (((odds.value)/100)*((truewin.value)/100))-((1-(truewin.value/100)))/(((odds.value)/100)*(risk.value));
+        }
+        else{
+            var bankroll = (truewin.value/100)*((100/(-1*odds.value))*wager.value)-((1-(truewin.value/100))*wager.value);
+        }
+        bankrollpercent.value = bankroll;
+    }
+    risk.onchange=odds.onchange=truewin.onchange=getBankRoll;
+
+</script>
 </body>
-
-
 </html>
