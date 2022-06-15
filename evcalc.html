@@ -1,3 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Barbell</title>
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@500&display=swap');
+	</style>
+
+	<script>
+
+		var wager = document.getElementById("wager");
+        var odds = document.getElementById("odds");
+        var truewin = document.getElementById("truewin");
+        var expectedvalue = document.getElementById("expval");
+
+    function getEV(){
+        if(odds.value>0){
+            var expval = (truewin.value/100)*((odds.value/100)*wager.value)-(1-(truewin.value/100)*wager.value);
+        }
+        else{
+            var expval = (truewin.value/100)*((100/(-1*odds.value))*wager.value)-(1-(truewin.value/100)*wager.value);
+        }
+
+    }
+	</script>
+
+</head>
+
+<body>
+<div id="body">
+		<div class="form_container">
+			<div class="form" id="create_account">
+				<h1 class="form_title" style="color: #6b9ad9;">Calculate The Odds</h1>
+				<div class="form_message form_message_error"></div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						Wager Amount
+					</div>
+					<input type="text" id="wager" class="form_input" autofoucs placeholder="Enter Wager">		
+				</div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						Sportsbook Odds
+					</div>
+					<input type="text" id="odds" autofoucs placeholder="Enter Odds">
+				</div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						True Win %
+					</div>
+					<input type="text" id="truewin" class="form_input" autofoucs placeholder="Enter Probability">
+				</div>
+				<div class="input_group" style="display: flex; justify-content: space-between; flex-direction: row;">
+					<div  class="captions">
+						Percentage
+					</div>
+					<input type="text" id="expval" name="" readonly class="form_input">
+				</div>
+			</div>
+			
+		</div>
+
+	<div id="dropdwn">
+		<a href="odds_calc.html" class="Calc">
+			Odds
+		</a>
+		<div class="Calc">
+			EV
+		</div>
+		<div class="Calc">
+			Arbitrage
+		</div>
+		<div class="Calc">
+			Bankroll
+		</div>
+		<div class="Calc">
+			Parlay
+		</div>
+		<div class="Calc">
+			True Value
+		</div>
+	</div>
+	<div id="dropdwn2">
+		<a href="odds_calc.html" class="Calc">
+			Odds
+		</a>
+		<div class="Calc">
+			EV
+		</div>
+		<div class="Calc">
+			Arbitrage
+		</div>
+		<div class="Calc">
+			Bankroll
+		</div>
+		<div class="Calc">
+			Parlay
+		</div>
+		<div class="Calc">
+			True Value
+		</div>
+	</div>
+
+	<img src="images/barbell.png" id="logo_img">
+
+	<div id="header">
+		<a href="index.html" id="logo">
+			B<span style="color: #E4F0FF">ARB</span>ELL
+		</a>
+		<div id="divider">
+			
+		</div>
+		<div id="nav">
+			<a href="#" id="calculator">
+				Calculator
+			</a>
+			<a href="#" id="Betting">
+				Betting
+			</a>
+		</div>
+		<div id="l_S_container">
+			<a href="login-sign.html" id="login">Login</a>
+			<a href="login-sign.html" id="sign_up">Sign Up</a>
+		</div>
+	</div>
+	<div id="mainArea">
+	</div>
+
+<!--
+
+
+
+	<div id="mainArea">
+		<div class="description_cont">
+			<div class="description">
+				Sportsbook Odds Simplified
+			</div>
+		</div>
+		<div id="tr1">
+			<div class="group">
+				<label for="">American : </label>
+				<input type ="text" name="" onkeyup="mult(this.value);" class="input1">
+
+			</div>
+
+			<div class="group" >
+				<label for="">Decimal : </label>
+				<input type ="text" id="decimal" name="" readonly class="input1">
+			</div>
+		</div>
+		<div id="tr2">
+			<div class="group">
+				<label for="">Fraction : </label>
+				<input type ="text" id="fraction" name="" readonly class="input1">
+			</div>
+
+			<div class="group" >
+				<label for="">Probability : </label>
+				<input type ="text" id="probability" name="" readonly class="input1">
+			</div>
+		</div>
+	</div>
+
+
+	<div id="footer">
+		footer... fill with stuff
+	</div>
+-->
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="js/custom.js"></script>
+</body>
+</html><script>
+
+var wager = document.getElementById("wager");
+var odds = document.getElementById("odds");
+var truewin = document.getElementById("truewin");
+
+function getEV(){
+    if(odds.value>0){
+        var expval = (truewin.value/100)*((odds.value/100)*wager.value)-(1-(truewin.value/100)*wager.value);
+    }
+    else{
+        var expval = (truewin.value/100)*((100/(-1*odds.value))*wager.value)-(1-(truewin.value/100)*wager.value);
+    }
+}
+
+
+
+
+</script>
+
+
 
 
 Wager
