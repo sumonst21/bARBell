@@ -173,12 +173,16 @@
         var bankrollpercent = document.getElementById("bankroll");
 
     function getBankRoll(){
+    	if(odds.value>0){
+    		var bankroll = (((((odds.value/100)*(truewin.value/100))-(1-(truewin.value/100))) / (odds.value/100)) * risk.value)*100
 
-        if(odds.value>0){
-            var bankroll = (((odds.value)/100)*((truewin.value)/100))-((1-(truewin.value/100)))/(((odds.value)/100)*(risk.value));
-        }
+    	}
+
+
+
         else{
-			var bankroll = ((100/(odds.value))*((truewin.value)/100))-((1-(truewin.value/100)))/((100/(odds.value))*(risk.value));        }
+        	var bankroll = (((((-100/odds.value)*(truewin.value/100))-(1-(truewin.value/100))) / (-100/odds.value)) * risk.value)*100
+		}
         bankrollpercent.value = bankroll;
     }
     risk.onchange=odds.onchange=truewin.onchange=getBankRoll;
