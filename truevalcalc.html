@@ -198,6 +198,7 @@ Add both percents together = total
     	var negativeTrue = (-1*negativeOdds.value)/((-1*negativeOdds.value)+100)*100
 
     	var positiveTotal = positiveTrue.value/(positiveTrue.value + negativeTrue.value)
+    	var negativeTotal = negativeTrue.value/(positiveTrue.value + negativeTrue.value)
 
     }
     negativeOdds.onchange=positiveOdds.onchange=getTrueWin;
