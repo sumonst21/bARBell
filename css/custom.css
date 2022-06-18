@@ -2,7 +2,7 @@
 	width: 100vw;
 	height: 75px;
 	border: solid 0px black;
-	background-color: #494949;
+	background-color: #2e2e2e;
 	z-index: 98;
 	position: fixed;
 	top: 0px;
@@ -20,8 +20,57 @@ body{
 	text-decoration: none;
 	z-index: 100;
 }
+#catchphrase{
+	font-size: 40px;
+	font-family: 'Anybody', cursive;
+	color: white;
+}
+#catchphrase_container{
+	display: flex;
+	width: 100vw;
+	justify-content: center;
+	position: absolute;
+	top: 20px;
+}
+#home_description{
+	margin: 0 auto;
+	border: solid 0px black;
+	max-width: 800px;
+	text-align: center;
+	position: relative;
+	top: 75px;
+	font-size: 16px;
+	font-family: 'Anybody', cursive;
+	color: white;
+	line-height: 23px;
+}
+.ev_arb_container{
+	margin: 0 auto;
+	width: 900px;
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	border: solid 0px white;
+	top: 125px;
 
+}
+.ev_arb_home{
+	display: flex;
+	height: 350px;
+	width: 275px;
+	background-color: #2e2e2e;
+	border-radius: 5px;
+    justify-content: center;
+    box-shadow: 3px 3px 10px -3px #044b5e;
 
+}
+.card_title{
+	font-size: 25px;
+	font-family: 'Anybody', cursive;
+	color: white;
+	position: relative;
+	top: 18px;
+}
 /*log in and sign up section*/
 #l_S_container{
 	display: flex;
@@ -131,7 +180,7 @@ body{
 
 
 #mainArea{
-	background-color: #232323;
+	background-color: #212121;
 	height: 100vh;
 	width: 100vw;
 	position: fixed;
@@ -215,15 +264,14 @@ body{
     max-width: 400px;
     margin: 1rem;
     padding: 2rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: var(--border-radius);
-    background: #ffffff;
+    background: #2e2e2e;
     z-index: 100;
     position: fixed;
 }
 .form_container, .form_button, .form_input{
 	font-family: 'Anybody', cursive;
-	color: #6b9ad9;
+	color: white;
 	font: 1rem;
 }
 
@@ -263,15 +311,15 @@ body{
     width: 100%;
     padding: 0.75rem;
     box-sizing: border-box;
-    border-radius: var(--border-radius);
-    border: 1px solid #dddddd;
+	border: solid 2px #272727;
+	border-radius: 5px;
     outline: none;
-    background: #eeeeee;
+    background: #403f3f;
     transition: background 0.2s, border-color 0.2s;
 }
 .form_input:focus{
-	border-color: #9d9ad9;
-	background-color: white;
+	border-color: #00DAFF;
+	background-color: #272727;
 }
 .form__input--error {
     color: var(--color-error);
@@ -326,6 +374,6 @@ body{
 	padding-top: 11px;
 	padding-right: 15px;
 	font-family: 'Anybody', cursive;
-	color: #6b9ad9;
+	color: white;
 	text-align: right;
 }
